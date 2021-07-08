@@ -1,0 +1,17 @@
+{
+  "name": "july-log-modules",
+  "version": "0.0.1",
+  "description": "log description",
+  "main": "entry/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --mode development"
+  },
+  "author": "july",
+  "license": "ISC",
+  "devDependencies": {
+    "antd": "^4.16.6",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  }
+}
