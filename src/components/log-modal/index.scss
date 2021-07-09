@@ -1,11 +1,10 @@
 .log-modal {
   .ant-modal-content {
-    border-radius: 4px;
     font-size: 14px;
-    font-family: PingFang-SC;
+    font-family: 'PingFang SC';
     .ant-modal-close {
-      top: 20x;
-      height: 24px;
+      top: 20px;
+      right: 24px;
       img {
         width: 16px;
         height: 16px;
@@ -19,9 +18,82 @@
         font-size: 14px;
       }
     }
+    .ant-modal-body {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 24px 0;
+      .log-table {
+        width: 89.8%;
+        .ant-table {
+          font-size: 14px;
+        }
+        .ant-table-thead > tr > th, .ant-table-tbody > tr > td {
+          line-height: 22px;
+          border-bottom-color: #E3E3E3;
+          color: rgba(10, 24, 36, .65)
+        }
+        .ant-table-thead > tr > th {
+          padding: 7px 0 7px 24px;
+          background: rgba(106, 160, 242, 0.1);
+          height: 37px;
+          font-weight: 400;
+        }
+        .ant-table-tbody > tr > td {
+          padding: 16px 0 16px 24px;
+        }
+        .table-content{
+          line-height: 22px;
+          max-height: 66px;
+          overflow-y: auto;
+          pre {
+            margin: 0;
+          }
+        }
+        .table-content::-webkit-scrollbar {
+          width: 4px;
+        }
+        .table-content::-webkit-scrollbar-thumb {
+          border-radius: 2px;
+          background-color: rgba(10, 24, 36, 0.15);
+        }
+        .overflow-name {
+          width: calc(100vw * 128 /1920);
+          overflow: hidden;
+          -ms-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          display:inline-block;
+        }
+        .ant-pagination {
+          font-size: 14px;
+          color: rgba(10, 24, 36, .65);
+          .ant-pagination-disabled a, .ant-pagination-disabled:hover a, .ant-pagination-disabled:focus a, .ant-pagination-disabled .ant-pagination-item-link, .ant-pagination-disabled:hover .ant-pagination-item-link, .ant-pagination-disabled:focus .ant-pagination-item-link {
+            border-color: #DBDDDE;
+            color: #DBDDDE;
+          }
+          .ant-pagination-prev a, .ant-pagination-next a {
+            color: #91979C;
+          }
+          .ant-pagination-item {
+            border-radius: 2px;
+            border-color: #DBDDDE;
+          }
+          .ant-pagination-item-active {
+            border-color: rgba(106, 160, 242, 1);
+            a {
+              color: rgba(106, 160, 242, 1);
+            }
+          }
+        }
+      }
+      .ant-table-pagination.ant-pagination{
+        margin-top: 90px;
+      }
+    }
     .ant-modal-footer {
       height: 56px;
       border-top-color: #E3E3E3;
+      padding: 12px 24px 12px 0;
       .close-button {
         width: 60px;
         height: 32px;
